@@ -1,26 +1,26 @@
 package me.thegloriousduck.discordfx;
 
 import javafx.application.Application;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.TextField;
-import javafx.stage.Stage;
 
-public class Main extends Application {
-
-    @Override
-    public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("DiscordFX.fxml"));
-        
-        primaryStage.setTitle("DiscordFX");
-        primaryStage.setScene(new Scene(root, 854, 480));
-        primaryStage.show();
-    }
-
+public class Main {
 
     public static void main(String[] args) {
-        launch(args);
+        Application.launch(DiscordFXApplication.class, args);
+    }
+
+    public static void info(String msg) {
+        System.out.println("[DiscordFX] " + msg);
+    }
+
+    public static void debug(String msg) {
+    	System.out.println("[DiscordFX] " + msg);
+    }
+
+    public static void warn(String msg) {
+    	System.out.println("[DiscordFX] " + msg);
+    }
+
+    public static void error(String msg) {
+    	System.out.println("[DiscordFX] " + msg);
     }
 }
